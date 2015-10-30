@@ -16,6 +16,9 @@
     "url": "https://github.com/chanokporn/iot-mongo-server/issues"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.3",
+    "node-restful": "^0.2.2"
   }
 }
