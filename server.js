@@ -2,19 +2,15 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
+mongoose.connect('mongodb://localhost/db')
+
 var app = express()
 
-
-mongoose.connect('mongodb://localhost/db')
- 
-
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static('public'))
 
-app.get('/', function (req, res) {
-  res.send('porpai')
-
-})
+app.use('/api', require('./routes/api.js'))
 
 app.listen(3000)
 console.log('run in 3000')
