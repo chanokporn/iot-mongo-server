@@ -20,31 +20,33 @@
 
 
        <div class="form-group">
-           <label >iot_id</label>
+           <label>iot_id</label>
            <input type="text" ng-model= "input.iot_id"class="form-control" placeholder="iot_id">
        </div>
        <div class="form-group">
-           <label f>temperature</label>
+           <label>temperature</label>
            <input type="text" class="form-control" ng-model="input.temperature" placeholder="temperature">
        </div>
        
         <div class="form-group">
-           <label f>timestamp</label>
+           <label>timestamp</label>
            <input type="text" class="form-control" ng-model="input.timestamp" placeholder="temperature">
        </div>
         <div class="form-group">
-           <label f>relative</label>
-           <input type="text" class="form-control" ng-model="input.relative" placeholder="relative">
+           <label>relative_humidity</label>
+           <input type="text" class="form-control" ng-model="input.relative_humidity" placeholder="relative_humidity">
        </div>
+
+          <center><button type="submit" class="btn btn-success">Submit</button>
 </div>
 </div>
-       <button type="submit" >submit</button>
+
    </form>
 
-<div ng-repet="show in iot.val">
-	iot_id : {{show.iot_id}}
-	temperature : {{show.temperature}}
-	timestamp : {{show.timestamp}}
+<div ng-repeat="show in iot.val">
+	iot_id : {{show.iot_id}}<br>
+	temperature : {{show.temperature}}<br>
+	timestamp : {{show.timestamp}}<br>
 	relative_humidity : {{show.relative_humidity}}
 </div>
 

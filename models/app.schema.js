@@ -5,7 +5,7 @@ var iott = new mongoose.Schema({
   iot_id: String,
   temperature: String,
   timestamp: String,
-  relative: String
+  relative_humidity: String
 
 })
 
