@@ -3,8 +3,25 @@ angular.module('app',[])
       
       var iot = this
             getiot ()
+      iot.toRegis = function(){
+
+        window.location = 'register.html'
+        
+      }
+
         iot.regis=function(input){
           console.log(input)
+          $http.post('/api/member', input)
+          .then(function success (response) {
+            console.log(response)
+           
+            alert('Success')
+          }, function error (response) {
+            alert(response.data.message)
+          })
+
+
+
         }
 
       iot.submit = function (data) {
