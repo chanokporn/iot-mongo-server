@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"ng-app= "app">
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+  
+  <script src="index.js"></script>
+  <meta charset="utf-8">
+  <title>register</title>
+</head>
+<body ng-controller="AppController as iot">
+  <form ng-submit = "iot.regis(input)">
+    <div class="form-group">
+        <br><br>
+           <label>username</label>
+           <input type="text" ng-model= "input.username"class="form-control" placeholder="username">
+       </div>
+       <div class="form-group">
+           <label>password</label>
+           <input type="text" class="form-control" ng-model="input.password" placeholder="password">
+       </div>
+       
+        <div class="form-group">
+           <label>name</label>
+           <input type="text" class="form-control" ng-model="input.name" placeholder="name">
+       </div>
+
+      <div class="form-group">
+           <label>lastname</label>
+           <input type="text" class="form-control" ng-model="input.lastname" placeholder="lastname">
+       </div>
+
+       <center><button type="submit" class="btn btn-success">Login</button></center>
+
+	</div>
+</body>
+</html>
