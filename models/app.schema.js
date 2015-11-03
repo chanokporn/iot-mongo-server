@@ -1,7 +1,7 @@
 var restful = require('node-restful')
 var mongoose = restful.mongoose
 
-var iott = new mongoose.Schema({
+var iot = new mongoose.Schema({
   iot_id: Number,
   temperature: Number,
   timestamp: {type : Date,default : Date.now},
@@ -9,4 +9,4 @@ var iott = new mongoose.Schema({
 
 })
 
-module.exports = restful.model('iott', iott)
+module.exports = restful.model('iot', iot)
