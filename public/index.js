@@ -2,6 +2,9 @@ angular.module('app',[])
 	.controller('AppController',function($http){
       
       var iot = this
+      iot.pp = "ffff"
+      getiot ()
+
 
       iot.submit = function (data) {
       $http.post('/api/iot', data)
