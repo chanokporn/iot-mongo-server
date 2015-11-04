@@ -112,6 +112,24 @@ iot.delete = function (id, index) {
     }
 
 
+      iot.login = function (data) {
+      console.log(data.username+" "+data.password)
+         $http.post('/login', {username : data.username , password : data.password })
+            .then(function success (response) {
+              console.log(response)
+              if(response.data[0].username == data.username && response.data[0].password == data.password){
+                console.log("have user")
+                window.location = 'report.html'
+              }
+              else {
+                window.location = 'index.html'
+              }
+              alert('Success')
+            }, function error (response) {
+              alert(response.data.message)
+            })
+
+    } 
 
 	})
 

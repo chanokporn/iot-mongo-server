@@ -43,10 +43,11 @@
         
        <div class="col-md-6">
        <br>
-          <input type="text" size ="20%"placeholder="Username">
-          <input type="text" size ="20%" placeholder="Password">
+       <form ng-submit = "iot.login(log)">
+          <input type="text" size ="20%"placeholder="Username" ng-model="log.username">
+          <input type="text" size ="20%" placeholder="Password" ng-model ="log.password">
           <button type="submit" class="btn btn-success">Login</button>
-
+       </form>
             <div ng-repeat="show in iot.val">
             <table class="table">
             <br>
