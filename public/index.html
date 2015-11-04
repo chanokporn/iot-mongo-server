@@ -38,17 +38,45 @@
          
    </form>
     <center><button  class="btn btn-success"  ng-click = "iot.toRegis()">Register</button></center>
-       </div>
+    </div>
+
+        
        <div class="col-md-6">
+       <br>
+          <input type="text" size ="20%"placeholder="Username">
+          <input type="text" size ="20%" placeholder="Password">
+          <button type="submit" class="btn btn-success">Login</button>
+
             <div ng-repeat="show in iot.val">
-            <br><br>
-	             <b>  iot_id : </b> {{show.iot_id}}<br>
-	             <b> temperature : </b> {{show.temperature}}<br>
-	             <b> timestamp : </b> {{iot.toThaiDateTime(show.timestamp)}}<br>
-	             <b> relative_humidity : </b> {{show.relative_humidity}}
-                 
-                 <hr width="80%"size="20"align="left"></hr>
-            </div> 
+            <table class="table">
+            <br>
+              <TR>
+                <TH>iot_id</TH>
+                <TH>temperature </TH>
+                <TH>timestamp</TH>
+                <TH>relative_humidity</TH>
+                <TH>Delete</TH>
+             </TR>
+             <TR>
+                <TD>{{show.iot_id}}</TD>
+                <TD>{{show.temperature}}</TD>
+                <TD>{{iot.toThaiDateTime(show.timestamp)}}</TD>
+                <TD>{{show.relative_humidity}}</TD>
+                <TD><button type="button" size="50" class="glyphicon glyphicon-trash"  ng-click="iot.delete(show._id,$index)"></button></TD>
+
+             </TR>
+
+            </table>
+
+            <!-- <br><br> -->
+	             <!-- <b>  iot_id : </b> {{show.iot_id}}<br> -->
+	             <!-- <b> temperature : </b> {{show.temperature}}<br> -->
+	             <!-- <b> timestamp : </b> {{iot.toThaiDateTime(show.timestamp)}}<br> -->
+	             <!-- <b> relative_humidity : </b> {{show.relative_humidity}} -->
+               <!-- <button type="button" class="btn btn-danger" ng-click="iot.delete(show._id,$index)">Remove</button> -->
+
+                 <!-- <hr width="80%"size="20"align="left"></hr> -->
+            <!-- </div>  -->
        </div>
 
 </div>

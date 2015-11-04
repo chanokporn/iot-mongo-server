@@ -6,7 +6,7 @@ angular.module('app',[])
       iot.toRegis = function(){
 
         window.location = 'register.html'
-        
+
       }
 
         iot.regis=function(input){
@@ -98,6 +98,20 @@ iot.graph = function(){
     iot.toThaiDateTime = function(date){
        return moment(date).format('MMMM Do YYYY, h:mm:ss a')
     }
+iot.delete = function (id, index) {
+      console.log(id)
+      $http.delete('/api/iot/' + id)
+        .success(function (data) {
+          alert('delete')
+          iot.val.splice(index, 1)
+        })
+        .error(function (data) {
+          alert('error')
+          console.log('Error: ' + data)
+        })
+    }
+
+
 
 	})
 
