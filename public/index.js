@@ -164,21 +164,21 @@ iot.showGraph = function(){
             var barData = {
                 labels : ["IoT-0","IoT-2","IoT-3","IoT-4","IoT-5","IoT-6","IoT-7","IoT-8",'IoT-9'],
                 datasets : [
-                    {
-                        fillColor : "#48A497",
-                        strokeColor : "#48A4D1",
-                        data : [hu1min,hu2min,hu3min,hu4min,hu5min,hu6min,hu7min,hu8min,hu9min,hu10min]
-                    },
+                    // {
+                    //     fillColor : "#48A497",
+                    //     strokeColor : "#48A4D1",
+                    //     data : [hu1min,hu2min,hu3min,hu4min,hu5min,hu6min,hu7min,hu8min,hu9min,hu10min]
+                    // },
                     {
                         fillColor : "rgba(73,188,170,0.4)",
                         strokeColor : "rgba(72,174,209,0.4)",
                         data : [hu1avg,hu2avg,hu3avg,hu4avg,hu5avg,hu6avg,hu7avg,hu8avg,hu9avg,hu10avg]
                     },
-                    {
-                        fillColor : "rgba(73,188,170,0.4)",
-                        strokeColor : "rgba(72,174,209,0.4)",
-                        data : [hu1max,hu2max,hu3max,hu4max,hu5max,hu6max,hu7max,hu8max,hu9max,hu10max]
-                    }
+                    // {
+                    //     fillColor : "rgba(73,188,170,0.4)",
+                    //     strokeColor : "rgba(72,174,209,0.4)",
+                    //     data : [hu1max,hu2max,hu3max,hu4max,hu5max,hu6max,hu7max,hu8max,hu9max,hu10max]
+                    // }
                 ]
             }
             // get bar chart canvas
@@ -308,21 +308,21 @@ iot.graphTem = function(){
             var barData = {
                 labels : ["IoT-0","IoT-2","IoT-3","IoT-4","IoT-5","IoT-6","IoT-7","IoT-8",'IoT-9'],
                 datasets : [
-                    {
-                        fillColor : "#48A497",
-                        strokeColor : "#48A4D1",
-                        data : [tem1min,tem2min,tem3min,tem4min,tem5min,tem6min,tem7min,tem8min,tem9min]
-                    },
+                    // {
+                    //     fillColor : "#48A497",
+                    //     strokeColor : "#48A4D1",
+                    //     data : [tem1min,tem2min,tem3min,tem4min,tem5min,tem6min,tem7min,tem8min,tem9min]
+                    // },
                     {
                         fillColor : "rgba(73,188,170,0.4)",
                         strokeColor : "rgba(72,174,209,0.4)",
                         data : [tem1avg,tem2avg,tem3avg,tem4avg,tem5avg,tem6avg,tem7avg,tem8avg,tem9avg,tem10avg]
                     },
-                    {
-                        fillColor : "rgba(73,188,170,0.4)",
-                        strokeColor : "rgba(72,174,209,0.4)",
-                        data : [tem1max,tem2max,tem3max,tem4max,tem5max,tem6max,tem7max,tem8max,tem9max,tem10max]
-                    }
+                    // {
+                    //     fillColor : "rgba(73,188,170,0.4)",
+                    //     strokeColor : "rgba(72,174,209,0.4)",
+                    //     data : [tem1max,tem2max,tem3max,tem4max,tem5max,tem6max,tem7max,tem8max,tem9max,tem10max]
+                    // }
                 ]
             }
             // get bar chart canvas
