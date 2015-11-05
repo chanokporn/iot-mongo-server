@@ -16,10 +16,15 @@
   <title>report</title>
 </head>
 <body ng-controller="AppController as iot">
-    <div ng-init ="iot.graph()">
+    <div ng-init ="iot.showGraph()">
 
+        <br>
+        <br>
+        
+        <!-- bar chart canvas element -->
+        <canvas id="iot" width="600" height="400"></canvas>
+        <canvas id="iot2" width="600" height="400"></canvas>
 
-         <canvas id="iot" width="1100" height="400"></canvas>
 
 
 	</div>

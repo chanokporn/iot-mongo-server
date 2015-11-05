@@ -13,6 +13,14 @@
   <title>iot</title>
 </head>
 <body ng-controller="AppController as iot">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      </div>
+       </nav>
+
   <div class="container">
    <div class="row">
    <div class="col-md-6">
@@ -43,11 +51,13 @@
         
        <div class="col-md-6">
        <br>
+
        <form ng-submit = "iot.login(log)">
-          <input type="text" size ="20%"placeholder="Username" ng-model="log.username">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size ="20%"placeholder="Username" ng-model="log.username">
           <input type="text" size ="20%" placeholder="Password" ng-model ="log.password">
           <button type="submit" class="btn btn-success">Login</button>
        </form>
+
             <div ng-repeat="show in iot.val">
             <table class="table">
             <br>
@@ -82,5 +92,6 @@
 
 </div>
  </div>
+
 </body>
 </html>

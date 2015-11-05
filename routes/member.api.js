@@ -36,6 +36,7 @@ router.post('/api/member', function (req, res, next) {
         console.log(results)
        }
      }); 
+       
   });
 
 module.exports = router
