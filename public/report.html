@@ -15,7 +15,9 @@
   <meta charset="utf-8">
   <title>report</title>
 </head>
+
 <body ng-controller="AppController as iot">
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid ">
     <div class="navbar-header">
@@ -23,25 +25,19 @@
     </div>
  </div>
     
-
-                                 
-   
     </div> 
 </nav>
 
 
     <div ng-init ="iot.showGraph()">
 
-        <br>
-        <br>
+        <br><br>
         
-      <center><h2>Report</h2>
-       <center> <canvas id="iot" width="800" height="400"></canvas></center>
+       <center><h2>Report : Temperature and Humidity</h2><br><br>
 
-        
-
-
-
-	</div>
+            <img src="../iot.jpg" align="right">
+       <center> <canvas id="iot" width="800" height="400"></canvas> </center>
+  
+    </div>
 </body>
 </html>
