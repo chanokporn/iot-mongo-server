@@ -13,62 +13,77 @@
   <title>iot</title>
 </head>
 <body ng-controller="AppController as iot">
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-      </div>
-      </div>
-       </nav>
 
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid ">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><h2>Internet Of Thing</h2></a>
+    </div>
+ </div>
+    
+
+    <form class="navbar-form navbar-right" role="search" ng-submit = "iot.login(log)">
+          <div class="form-group">
+              <input type="text" class="form-control" name="username" placeholder="Username" ng-model="log.username">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" name="password" placeholder="Password" ng-model ="log.password">
+          </div>
+              <button type="submit" class="glyphicon glyphicon-log-in btn btn-success">Login</button> 
+              <button type="submit" class="glyphicon glyphicon-user btn btn-info" ng-click = "iot.toRegis()">SignUp</button> </a>
+                                 
+    </form>
+    </div>
+   
+ 
+</nav>
+<br><br><br><br>
   <div class="container">
    <div class="row">
-   <div class="col-md-6">
+   <div class="col-md-4">
    <form ng-submit = "iot.submit(input)">
        <div class="form-group">
         <br><br>
-           <label>iot_id</label>
+           <label>Iot_id</label>
            <input type="text" ng-model= "input.iot_id"class="form-control" placeholder="iot_id">
        </div>
        <div class="form-group">
-           <label>temperature</label>
+           <label>Temperature</label>
            <input type="text" class="form-control" ng-model="input.temperature" placeholder="temperature">
        </div>
        
     
         <div class="form-group">
-           <label>relative_humidity</label>
+           <label>Relative_humidity</label>
            <input type="text" class="form-control" ng-model="input.relative_humidity" placeholder="relative_humidity">
        </div>
 
-          <center><button type="submit" class="btn btn-success">Submit</button></center>
+          <center><button type="submit" class="btn btn-primary glyphicon glyphicon-plus">Add</button></center>
           <br>
          
    </form>
-    <center><button  class="btn btn-success"  ng-click = "iot.toRegis()">Register</button></center>
-    </div>
+</div>
+<br>
 
         
-       <div class="col-md-6">
+       <div class="col-md-8">
        <br>
 
-       <form ng-submit = "iot.login(log)">
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size ="20%"placeholder="Username" ng-model="log.username">
-          <input type="text" size ="20%" placeholder="Password" ng-model ="log.password">
-          <button type="submit" class="btn btn-success">Login</button>
-       </form>
 
-            <div ng-repeat="show in iot.val">
+           
             <table class="table">
             <br>
-              <TR>
-                <TH>iot_id</TH>
-                <TH>temperature </TH>
-                <TH>timestamp</TH>
-                <TH>relative_humidity</TH>
-                <TH>Delete</TH>
-             </TR>
-             <TR>
+            
+              <TR align="center">
+                <TH >Iot_id</TH>
+                <TH >Temperature </TH>
+                <TH >Timestamp</TH>
+                <TH >Relative_humidity</TH>
+                <TH >Delete</TH>
+          </TR>
+             
+            
+             <TR align="center"  ng-repeat="show in iot.val">
                 <TD>{{show.iot_id}}</TD>
                 <TD>{{show.temperature}}</TD>
                 <TD>{{iot.toThaiDateTime(show.timestamp)}}</TD>
@@ -78,16 +93,6 @@
              </TR>
 
             </table>
-
-            <!-- <br><br> -->
-	             <!-- <b>  iot_id : </b> {{show.iot_id}}<br> -->
-	             <!-- <b> temperature : </b> {{show.temperature}}<br> -->
-	             <!-- <b> timestamp : </b> {{iot.toThaiDateTime(show.timestamp)}}<br> -->
-	             <!-- <b> relative_humidity : </b> {{show.relative_humidity}} -->
-               <!-- <button type="button" class="btn btn-danger" ng-click="iot.delete(show._id,$index)">Remove</button> -->
-
-                 <!-- <hr width="80%"size="20"align="left"></hr> -->
-            <!-- </div>  -->
        </div>
 
 </div>
